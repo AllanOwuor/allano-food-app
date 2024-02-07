@@ -1,0 +1,402 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*/
+:root{
+    --list_hover: #dc1313;
+    --black: #000;
+    --body_background: #dedede;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: whitesmoke;
+    width: 98vw;
+    height: 100vh;
+    
+}
+header h1{
+    color: red;
+    font: 25px;
+
+}
+
+header nav .bar{
+    position: relative;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header .bar .logo{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    height: 450px;
+    width: 250px;
+    background: #282828;
+    transition: 1s linear;
+}
+
+header nav .logo h2{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(244, 224, 10);
+
+}
+
+.fa-solid {
+    position: absolute;
+    width: 50px;
+}
+.fa-moon {
+    left: 4px;
+}
+.fa-cart-shopping {
+    right: 40px;
+}
+header nav .right_menu {
+    display: flex;
+    flex: content;
+    align-items: center;
+    width: 50%;
+    height: 5%;
+    
+}
+
+header nav .right_menu ul {
+    text-decoration: solid;
+    list-style-type: none;
+    display: flex;
+    flex: content;
+    align-items: center;
+}
+
+header nav .right_menu ul li{
+    float: left;
+    padding: 3px 10px;
+    left: 230px;
+}
+
+header nav .right_menu ul li a{
+    text-decoration: none;
+    position: relative;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    left: 590px;
+    transition: .3s linear;
+
+}
+
+header nav .right_menu .user_cart{
+    left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+header nav .right_menu ul li a::before{
+    content: "";
+    position: absolute;
+    text-decoration: none;
+    width: 4px;
+    height: 4px;
+    background: var(--list_hover);
+    border-radius: 50%;
+    bottom: -5px;
+    left: 45%;
+    opacity: 0;
+    transition: .3s linear;
+}
+header nav .right_menu ul li a:hover{
+    color: var(--list_hover);
+}
+header nav .right_menu ul li a:hover::before{
+    opacity: 1;
+}
+
+header nav .right_menu .user img{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+header nav .right_menu .user_cart .user::before{
+    content:"";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: var(--list_hover);
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    border: #000;
+}
+
+
+header .bar .logo img{
+    width: 300px;
+    margin: 20px 0px 0px -30px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 20px rgb(0, 0, 0, .6));
+    justify-content: space-between;
+}
+
+/*
+header nav .menu{
+    font-size: 25px;
+    color: var(--black);
+}*/
+
+
+.left_menu{
+    width: 20px;
+    height: 90%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;}
+    /*border:1px solid red; */
+
+
+.left_menu a{
+    margin: 30px 0px;
+    padding: 0px 5px;
+    text-decoration: none; 
+    transition: .3s linear;
+    color: var(--black);
+    font-weight: 600;
+    transform: rotate(-90deg);
+}
+/*
+.left_menu ul li{
+    list-style-type: none;
+}
+
+.left_menu ul li a{
+    font-size: 13px;
+    text-decoration: none;   
+}*/
+
+.left_menu  a:hover{
+    color: var(--list_hover);
+}
+
+.description{
+    position: absolute;
+    top: 120px;
+    right: 38px;
+    height: 60%;
+    width: 63%;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 5px 20px;
+    
+}
+
+.description h3{
+    font-size: 30px;
+}
+
+.description span{
+    font-weight: bold;
+}
+
+.description h3,p{
+    text-align: center;
+}
+
+.price_order{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 50px;
+   /* border: 2px solid black;*/
+
+  }
+  
+
+.price_order .price h2{
+    font-size: 20px;
+    color: #dc1313;
+    line-height: 18px;
+  }
+
+.price_order .price p{
+    font-size: 12px;
+}
+
+.description .price_order button{
+     padding: 4px 20px; 
+     color: #fff; 
+     background: #121213; 
+     font-size: 14px;
+    margin-left: 400px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    }     
+.description .price_order button:hover{
+    background: #dc1313;
+    border: 1px solid transparent;
+}
+.cards{
+    width: 90%;
+    height: 140px;
+    /*border: 1px solid #000; */
+    margin: auto;
+    position: relative;
+    top: -90px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    scroll-behavior: smooth;
+    transition: .1s linear;
+
+}
+
+.cards::-webkit-scrollbar { display: none; } 
+
+.cards .card{
+    position: relative;
+    min-width: 125px;
+    min-height: 125px;
+    /*border: 1px solid #000; */
+    margin-right: 13px;
+    background: #282828;
+    border-radius: 50px 10px 10px 10px;
+  }
+.cards .card:nth-last-child(1){
+    margin-right: 0px;
+  }
+.cards .card{
+    margin-right: 0px;
+  }
+
+.disabc{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: -1px;
+    left: -1px;
+    border-radius: 20px 5px 5px 5px;
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0, .6));
+}
+
+.cards .card .disa{
+    width: 70px;
+    max-height: 70px;
+    position: relative;
+    top: -1px;
+    left: -1px;
+    border-radius: 20px 5px 5px 5px;
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0, .6));
+  }
+
+.cards .card .disb{
+    max-width: 70px;
+    max-height: 70px;
+    position: relative;
+    top: -1px;
+    left: -1px;
+    border-radius: 20px 5px 5px 5px;
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0, .6));
+  }
+
+  .cards .card .disc{
+    width: 70px;
+    max-height: 70px;
+    position: relative;
+    top: -1px;
+    left: -1px;
+    border-radius: 20px 5px 5px 5px;
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0, .6));;
+  }
+  .cards .card .disd{
+    width: 70px;
+    max-height: 70px;
+    position: relative;
+    top: -1px;
+    left: -1px;
+    border-radius: 20px 5px 5px 5px;
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0, .6));;
+  }
+.cards .card h4{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+ }
+
+.cards .card h5{
+    color: #fff;
+    font-size: 11px;
+    font-family: 500px;
+    padding: 0px 10px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+  }
+
+.cards .card p{
+    color: rgb(203, 203, 203);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0px 10px;
+  }
+
+#about-us {
+    text-align: center;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: auto;
+    padding: 5px 10px;
+    background: transparent;
+}
+
+/* dark mode */
+/* Your existing CSS */
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode header nav .bar .logo {
+    background: #121212;
+}
+
+.dark-mode header nav .right_menu ul li a {
+    color: hsl(62, 90%, 48%);
+}
+.dark-mode #about-us h2{
+    color: hsl(62, 90%, 48%);
+}
+.dark-mode .left_menu a{
+    color: hsl(62, 90%, 48%);
+}
+.dark-mode .description .price_order button {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode .description .price_order button:hover {
+    background-color: #dc1313;
+    color: white;
+}
