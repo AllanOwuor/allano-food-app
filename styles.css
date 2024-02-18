@@ -13,6 +13,57 @@
 html{
     font-family: 'Poppins', sans-serif;
 }
+/* For screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 768px) {
+    header .bar .logo {
+        width: 200px; /* Adjust the logo width */
+    }
+
+    header nav .right_menu {
+        width: 60%; /* Adjust the width of the right menu */
+    }
+
+    header nav .right_menu ul {
+        font-size: 14px; /* Reduce font size for menu items */
+    }
+
+    header nav .right_menu .user_cart {
+        display: none; /* Hide user cart on small screens */
+    }
+
+    .left_menu {
+        display: none; /* Hide left menu on small screens */
+    }
+
+    .description {
+        width: 90%; /* Adjust description width */
+        margin: 0 auto; /* Center align description */
+        top: 100px; /* Adjust top position */
+    }
+
+    .price_order {
+        margin-left: 0; /* Remove margin-left */
+        justify-content: center; /* Center align the button */
+    }
+
+    .cards {
+        flex-wrap: wrap; /* Allow cards to wrap */
+        padding: 0; /* Remove padding */
+        overflow-x: auto; /* Enable horizontal scroll */
+        justify-content: center; /* Center align cards */
+    }
+
+    .cards .card {
+        margin-right: 10px; /* Adjust margin between cards */
+        margin-bottom: 10px; /* Adjust margin below cards */
+    }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 769px) {
+    /* Add specific styles for larger screens here */
+}
+
 
 body{
     background-color: whitesmoke;
@@ -89,7 +140,7 @@ header nav .right_menu ul li{
 }
 
 header nav .right_menu ul li a{
-    text-decoration: none;
+    text-decoration: underline;
     position: relative;
     font-size: 15px;
     font-weight: bold;
@@ -120,6 +171,7 @@ header nav .right_menu ul li a::before{
 }
 header nav .right_menu ul li a:hover{
     color: var(--list_hover);
+    text-decoration: none;
 }
 header nav .right_menu ul li a:hover::before{
     opacity: 1;
@@ -164,7 +216,7 @@ header nav .menu{
     height: 90%;    
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;}
     /*border:1px solid red; */
 
@@ -172,7 +224,7 @@ header nav .menu{
 .left_menu a{
     margin: 30px 0px;
     padding: 0px 5px;
-    text-decoration: none; 
+    text-decoration: underline; 
     transition: .3s linear;
     color: var(--black);
     font-weight: 600;
@@ -190,6 +242,7 @@ header nav .menu{
 
 .left_menu  a:hover{
     color: var(--list_hover);
+    text-decoration: none;
 }
 
 .description{
@@ -237,7 +290,7 @@ header nav .menu{
 }
 
 .description .price_order button{
-     padding: 4px 20px; 
+     padding: 6px 16px; 
      color: #fff; 
      background: #121213; 
      font-size: 14px;
@@ -260,6 +313,7 @@ header nav .menu{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
     overflow: auto;
     scroll-behavior: smooth;
     transition: .1s linear;
@@ -323,6 +377,7 @@ header nav .menu{
     border-radius: 20px 5px 5px 5px;
     filter: drop-shadow(0px 0px 5px rgb(0, 0, 0, .6));;
   }
+
   .cards .card .disd{
     width: 70px;
     max-height: 70px;
@@ -332,21 +387,33 @@ header nav .menu{
     border-radius: 20px 5px 5px 5px;
     filter: drop-shadow(0px 0px 5px rgb(0, 0, 0, .6));;
   }
+
 .cards .card h4{
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 5px;
     color: #fff;
     font-size: 13px;
     font-weight: 600;
  }
 
+.cards h4 span {
+    display: block;
+}
+
+.cards .card p, h4 span{
+    color: rgb(203, 203, 203);
+    font-size: 11px;
+    font-weight: 500;
+}
+
 .cards .card h5{
     color: #fff;
     font-size: 11px;
     font-family: 500px;
-    padding: 0px 10px;
-    margin-top: 4px;
+   /* padding: 0px 10px;
+    margin-top: 4px; */
+    text-align: center;
     display: block;
     overflow: hidden;
     white-space: nowrap; 
@@ -354,11 +421,13 @@ header nav .menu{
   }
 
 .cards .card p{
-    color: rgb(203, 203, 203);
-    font-size: 11px;
-    font-weight: 500;
     padding: 0px 10px;
   }
+
+.cards .card p span {
+    margin-left: 4px;
+    color: yellow;
+}
 
 #about-us {
     text-align: center;
@@ -371,7 +440,6 @@ header nav .menu{
 }
 
 /* dark mode */
-/* Your existing CSS */
 
 .dark-mode {
     background-color: #121212;
