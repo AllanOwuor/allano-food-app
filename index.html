@@ -7,6 +7,10 @@
     <title>Mordern Food Website</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/4910029854.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <header>
@@ -24,21 +28,21 @@
                 <div class="user_cart">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <div class="user">
-                        <img src="download.png" alt="user_account_image">
+                        <img src="images/download.png" alt="user_account_image">
                     </div>
                 </div>
             </div>
             
             <div class="logo">
                 <h2>foodbar</h2>
-                <img src="food6.jpg" alt="first dish">
+                <img src="images/food6.jpg" alt="first dish">
             </div>   
         </nav>
     </header>
     
     <div class="left_menu">
-        <a href="#">Chefs</a>
-        <a href="#">Recipe</a>
+        <a href="#">Offers</a>
+        <a href="#">menu</a>
         <a href="#">Ratings</a>    
     </div>
     <div class="description">
@@ -52,58 +56,64 @@
                 <h2 id="price_cont">$38</h2>
                 <p>total payable</p>
             </div>
-            <button id="submit">Order now</button>
+            <button id="submit" type="submit" onclick="myfunc()">Order now</button>
            </div>  
     </div>
 
         <div class="cards">
             <div class="card">
-                <img src="food2.png" alt="next food" class="disabc">
-                <h4>$10</h4>
+                <img src="images/food2.png" alt="next food" class="disabc">
+                <h4>$10<span>per plate</span></h4>
                 <h5>Kienyeji special</h5>
-                <p>per plate</p>
+                <p>Ratings<span>3.8</span></p>
             </div>
-            <div class="card">
-                <img src="food3.jpg" alt="next food" class="disa">
-                <h4>$15</h4>
+            <div class="card one">
+                <img src="images/food3.jpg" alt="next food" class="disa">
+                <h4>$15<span>per plate</span></h4>
                 <h5>Drumsticks</h5>
-                <p>per plate</p>
+                <p>Ratings<span>4.3</span></p>
             </div>
-            <div class="card">
-                <img src="food4.jpg" alt="next food" class="disb">
-                <h4>$30</h4>
+            <div class="card two">
+                <img src="images/food4.jpg" alt="next food" class="disb">
+                <h4>$30<span>per plate</span></h4>
                 <h5>Beef stew</h5>
-                <p>per plate</p>
+                <p>Ratings<span>4.9</span></p>
             </div>
-            <div class="card">
-                <img src="food5.jpg" alt="next food" class="disb">
-                <h4>$19</h4>
+            <div class="card three">
+                <img src="images/food5.jpg" alt="next food" class="disb">
+                <h4>$19<span>per plate</span></h4>
                 <h5>Pilau</h5>
-                <p>per plate</p>
+                <p>Ratings<span>4.8</span></p>
             </div>
-            <div class="card">
-                <img src="food6.jpg" alt="next food" class="disb">
-                <h4>$23</h4>
+            <div class="card four">
+                <img src="images/food6.jpg" alt="next food" class="disb">
+                <h4>$23<span>per plate</span></h4>
                 <h5>Pilau 'n poultry</h5>
-                <p>per plate</p>
+                <p>Ratings<span>4.5</span></p>
             </div>
-            <div class="card">
-                <img src="food7.jpg" alt="next food" class="disb">
-                <h4>$21</h4>
-                <h5>Ugali 'n Pork</h5>
-                <p>per plate</p>
+            <div class="card five">
+                <img src="images/food7.jpg" alt="next food" class="disb">
+                <h4>$21<span>per plate</span></h4>
+                <h5>Pork</h5>
+                <p>Ratings<span>4.5</span></p>
             </div>
-            <div class="card">
-                <img src="food1.png" alt="next food" class="disc">
-                <h4>$28</h4>
-                <h5>Chicken dish</h5>
-                <p>per plate</p>
+            <div class="card five">
+                <img src="images/food1.png" alt="next food" class="disc">
+                <h4>$28<span>per plate</span></h4>
+                <h5>Crispy chicken</h5>
+                <p>Ratings<span>4.5</span></p>
             </div>
-            <div class="card">
-                <img src="tea.jpg" alt="next food" class="disd">
-                <h4>$14</h4>
-                <h5>East Africa Cadammon tea</h5>
-                <p>per plate</p>
+            <div class="card six">
+                <img src="images/tea.jpg" alt="next food" class="disd">
+                <h4>$14<span>per plate</span></h4>
+                <h5>Cadammon tea</h5>
+                <p>Ratings<span>4.5</span></p>
+            </div>
+            <div class="card seven">
+                <img src="images/food8.jpg" alt="next food" class="disc">
+                <h4>$24<span>per plate</span></h4>
+                <h5>matumbo</h5>
+                <p>Ratings<span>4.5</span></p>
             </div>
         </div>
    
@@ -111,8 +121,9 @@
     </div>
     <div id="about-us">
         <h2>About us</h2>
-        <p>A food delivery web app where convenience meets culinary delight. Order from local favorites with
-             ease and savor every bite, delivered straight to your door."</p>
+        <p>A food delivery web app where convenience meets culinary delight. 
+           Order from local favorites with ease and savor every bite,
+           delivered straight to your door."</p>
     </div>
     <footer id="contacts">
         <p>Contact a customer support rep at <a href="mailto:foodDev@example.com">mordern food website</a>.</p>
