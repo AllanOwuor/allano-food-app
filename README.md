@@ -3,6 +3,6 @@ This is a food delivery website that I have developed, to help customers order f
 
 # screenshots
 dark mode
-https://github.com/AllanOwuor/allano-food-app/blob/main/screenshots/dark%20mode.png
+[https://github.com/AllanOwuor/allano-food-app/blob/main/screenshots/dark%20mode.png]
 light mode
-https://github.com/AllanOwuor/allano-food-app/blob/main/screenshots/light%20mode.png
+[https://github.com/AllanOwuor/allano-food-app/blob/main/screenshots/light%20mode.png]
